@@ -106,9 +106,6 @@ if not st.session_state.auth:
 # ─────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    import os
-    st.write("DEBUG — current working directory:", os.getcwd())
-    st.write("DEBUG — files visible here:", os.listdir("."))
     path = ""
     df_main = pd.read_excel(path + "PCOS_data_without_infertility.xlsx", sheet_name="Full_new")
     df_inf  = pd.read_csv(path + "PCOS_infertility.csv")
